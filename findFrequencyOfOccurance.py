@@ -42,4 +42,4 @@ def findLastOccurance(listOfNumbers,number,start,end):
 
 
 listOfNumbers = [1,1,1,2,2,2,2,2,2,3,4,5]
-print(findFrequency(listOfNumbers,2))
+print(findFrequency(listOfNumbers,4))
