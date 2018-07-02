@@ -37,11 +37,11 @@
 def findHash(string):
 	h = {}
 	res = ""
+	count = 0
 	for ch in string:
-		if ch in h.keys():
-			h[ch] += 1
-		else:
-			h[ch] = 1
+		if ch not in h.keys():
+			h[ch] = count
+			count += 1
 		res += str(h[ch])
 	return res
 
@@ -51,7 +51,7 @@ def findStrings(listOfStrings,pattern):
 	for string in listOfStrings:
 		if patternLen == len(string) and patternHash == findHash(string):
 			print(string,end = " ")
-listOfStrings=["abb", "abc", "xyz", "xyy"]
+listOfStrings=["bab", "abc", "xyz", "xyy"]
 pattern = "foo"
 findStrings(listOfStrings,pattern)
 print()
